@@ -1,0 +1,12 @@
+- var tableau = ["Jimmy", "Valentin", "Jeanne", "Christopher", "Nassim", "Julien", "Nicolas", "Christophe", "Isabel", "Rythissen", "Isabelle", "Paul", "Leo", "Michael", "Aurelie", ]
+include include/header.pug
+    section.container.liste
+        h1 HELP
+        ul.list-unstyled.ici
+            li 
+            - for (var i = 0 ; i < tableau.length; i++){
+                - var test =  tableau[i]
+                a(href="/promo/"+test)
+                    button.col-xs-4.btn.btn-info(id=test)= test 
+            - }
+include include/footer.pug
